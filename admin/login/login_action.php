@@ -9,7 +9,7 @@
             Atau account Anda sedang diblokir.<br>";
         echo "<a href=index.php><b>ULANGI LAGI</b></a></center>";
     } else {
-        $sql = mysqli_query($mysqli,"SELECT * FROM admin WHERE username = '$admin' AND password = sha1('$pass') ");
+        $sql = mysqli_query($mysqli,"SELECT * FROM admin WHERE username = '$admin' AND password = sha1($pass) ");
         $data = mysqli_fetch_array($sql);
         $cek = mysqli_num_rows($sql);
         if($cek >= 1)
